@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* html tag style  */
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+
+  h2 {
+    @apply text-xl;
+  }
+  body {
+    @apply font-Roboto;
+  }
+}
+
+/* layer style to add multiple class */
+@layer components {
+}
+
+/* custom style */
+@layer utilities {
+  .tab-container button.active,
+  .tab-container button:hover {
+    background-color: #4e588c;
+    color: #fff;
+  }
+  .tab-container .tab-content {
+    opacity: 0;
+    height: 0;
+    transition: all 1s ease-in-out;
+  }
+  .tab-container .tab-content.show {
+    opacity: 1;
+    height: 100%;
+    transition: all 1s ease-out;
+  }
+  .tab-container .tab-content .animationWrapp {
+    display: none;
+  }
+  .tab-container .tab-content.show .animationWrapp {
+    display: block;
+  }
+}
